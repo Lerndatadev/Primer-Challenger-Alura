@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body> 
+    <header class="header">
+        <img class="header__logo" src="img/Logo.png" alt="Logo de Alura">
+    </header>
+    <main class="contenedor">
+        <div class="grid">
+            <section class="section">
+                <label for="textoEntrada"></label>
+                <textarea id="textoEntrada" class="section__textarea" cols="50" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                <h6 class="section__informacion">Solo letras minúsculas y sin acentos</h6>
+                <div class="botones">
+                    <button class="section__boton--encriptar" onclick="botonEncriptar();">Encriptar</button>
+                    <button class="section__boton--desencriptar" onclick="botonDesencriptar();">Desencriptar</button>
+                </div>
+            </section>
+            <section class="section">
+                <label for="mensajeSalida"></label>
+                <textarea id="mensajeSalida" class="section__textarea--mensaje" cols="50" rows="10" readonly></textarea>
+                <div class="section__botones--pegarCopiar">
+                    <button id="copiarBtn" class="section__copiar" onclick="copiarTexto()">Copiar</button>
+                    <button id="pegarBtn" class="section__pegar" onclick="pegarTexto()" style="display: none;">Pegar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__parrafo">Todos los derechos reservados. Lerner Cordova Mendoza</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
